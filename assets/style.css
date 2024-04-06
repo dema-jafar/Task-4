@@ -264,7 +264,7 @@
     scale: 1.1;
 }
 
-.categories .categories-items .categories-item button {
+.button {
     padding: 8px 10px;
     margin-top: 10px;
     background-color: #59ab6e;
@@ -276,7 +276,7 @@
     transition: 0.5s;
 }
 
-.categories .categories-items .categories-item button:hover {
+.button:hover {
     background-color: #a4cdae;
     color: #212934;
     box-shadow: 1px 1px 5px black;
@@ -594,6 +594,61 @@ footer a {
 /* end brands */
 
 
+/* start contact page */
+/* start header */
+/* start contact hero */
+.contact-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    background-color: #efefef;
+}
+
+.contact-hero .intro-text {
+    transform: translateY(70%);
+    max-width: 600px;
+    padding: 0 10px;
+}
+/* end contact hero */
+/* end header */
+
+/* start form */
+.form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 100px 10px;
+    position: relative;
+}
+
+.form input,
+.form textarea {
+    padding: 5px;
+    width: 100%;
+    margin: 10px 0;
+    font-size: 18px;
+    border: 1px solid #cfd6e1;
+    outline-color: #59ab6e;
+}
+
+.form .name-email {
+    display: flex;
+    gap: 10px;
+}
+
+.form .name,
+.form .email {
+    flex: 1;
+}
+
+.form button {
+    position: absolute;
+    right: 10px;
+    bottom: 50px;
+}
+/* end form */
+
+
 
 @media (max-width:1200px) {
     .navbar .nav-container {
@@ -650,6 +705,10 @@ footer a {
     .about-hero .hero-container {
         flex-direction: column;
     }
+
+    .form {
+        max-width: 600px;
+    }
 }
 
 @media (max-width:768px) {
@@ -664,6 +723,15 @@ footer a {
 
     .brands .brands-items img {
         width: 60px;
+    }
+
+    .form {
+        max-width: 450px;
+    }
+
+.form .name-email {
+    flex-direction: column;
+    gap: 0;
     }
 }
 
@@ -694,5 +762,9 @@ footer a {
 
     .brands .brands-items img {
         width: 50px;
+    }
+
+    .form {
+        max-width: 320px;
     }
 }
