@@ -139,8 +139,9 @@
     position: relative;
 }
 
-.hero .container {
-    width: 1100px;
+.hero .hero-container {
+    max-width: 1100px;
+    padding: 0 10px;
     transform: translateY(10%);
     display: flex;
     flex-wrap: wrap;
@@ -486,6 +487,114 @@ footer a {
 }
 /* end footer */
 
+
+/* start about page */
+
+/* start header */
+/* start hero */
+
+.about-hero {
+    background-color: #59ab6e;
+}
+
+.about-hero .about-hero-text {
+    max-width: 700px;
+    color: white;
+}
+
+.about-hero .about-hero-text h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.about-hero .about-hero-text p {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.about-hero img {
+    width: 300px;
+}
+/* end hero */
+/* end header */
+
+/* start services */
+.services .services-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.services .services-items .services-item {
+    padding: 50px 0;
+    width: 250px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0 4px 5px 2px rgba(0,0,0,20%);
+}
+
+.services .services-items .services-item i {
+    font-size: 60px;
+    color: #59ab6e;
+    margin-bottom: 10px;
+}
+
+.services .services-items .services-item:hover {
+    background-color: #59ab6e;
+    color: white;
+}
+
+.services .services-items .services-item:hover i {
+    color: white;
+}
+/* end services */
+
+/* start brands */
+.brands {
+    background-color: #cfd6e1;
+}
+
+.brands .container {
+    padding: 100px 10px;
+}
+
+.brands .brands-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.brands .brands-items img {
+    width: 80px;
+    filter: grayscale(100%);
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.brands .brands-items img:hover {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+.brands .brands-items i {
+    font-size: 18px;
+    color: #777;
+    cursor: pointer;
+}
+
+.brands .brands-items i:hover {
+    color: black;
+}
+/* end brands */
+
+
+
 @media (max-width:1200px) {
     .navbar .nav-container {
         max-width: 900px;
@@ -493,6 +602,10 @@ footer a {
 
     .contact-nav .contact-nav-container {
         max-width: 900px;
+    }
+
+    .about-hero .about-hero-text {
+        max-width: 500px;
     }
 }
 
@@ -522,27 +635,35 @@ footer a {
         height: 750px;
     }
 
-    .hero .container {
+    .hero .hero-container {
         flex-direction: column-reverse;
     }
 
-    .hero .container img {
+    .hero .hero-container img {
         width: 300px;
     }
 
     .footer-items {
         flex-direction: column;
     }
+
+    .about-hero .hero-container {
+        flex-direction: column;
+    }
 }
 
-@media (max-width:786px) {
+@media (max-width:768px) {
     .navbar .nav-container {
-        max-width: 500px;
+        max-width: 550px;
     }
 
     footer .social {
         flex-direction: column;
         gap: 20px;
+    }
+
+    .brands .brands-items img {
+        width: 60px;
     }
 }
 
@@ -551,11 +672,27 @@ footer a {
         max-width: 300px;
     }
 
+    .hero {
+        height: 850px;
+    }
+
     .featured .featured-items .featured-item {
         max-width: 300px;
     }
 
     .copyright p {
         font-size: 15px;
+    }
+
+    .services .services-items .services-item {
+        width: 100%;
+    }
+
+    .brands .brands-items {
+        gap: 15px;
+    }
+
+    .brands .brands-items img {
+        width: 50px;
     }
 }
