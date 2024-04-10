@@ -23,7 +23,8 @@
     margin: 0 auto;
 }
 
-.contact-nav * {
+.contact-nav a,
+.contact-nav i {
     color: #cfd6e1;
     text-decoration: none;
     font-size: 12px;
@@ -418,8 +419,9 @@ footer a {
 .social li {
     width: 50px;
     height: 50px;
-    text-align: center;
-    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid #2d343f;
     border-radius: 50%;
     font-size: 23px;
@@ -625,7 +627,7 @@ footer a {
 .form textarea {
     padding: 5px;
     width: 100%;
-    margin: 10px 0;
+    margin: 5px 0 15px;
     font-size: 18px;
     border: 1px solid #cfd6e1;
     outline-color: #59ab6e;
@@ -633,7 +635,7 @@ footer a {
 
 .form .name-email {
     display: flex;
-    gap: 10px;
+    gap: 15px;
 }
 
 .form .name,
@@ -741,7 +743,11 @@ footer a {
     }
 
     .hero {
-        height: 850px;
+        height: 900px;
+    }
+
+    .hero .hero-text {
+        max-width: 280px;
     }
 
     .featured .featured-items .featured-item {
